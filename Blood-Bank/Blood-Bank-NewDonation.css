@@ -1,0 +1,76 @@
+.new-box {
+    position: absolute;
+    top: 70%;
+    bottom: 200%;
+    left: 50%;
+    width: 400px;
+    height: 700px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .new-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #C31313;
+    text-align: center;
+  }
+  
+  .new-box .new-user-box {
+    position: relative;
+  }
+  
+  .new-box .new-user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #C31313;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #C31313;
+    outline: none;
+    background: transparent;
+  }
+  .new-box .new-user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #C31313;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .new-box .new-user-box input:focus ~ label,
+  .new-box .new-user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #C31313;
+    font-size: 12px;
+  }
+  
+  .new-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #C31313;
+    font-size: 16px;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    /* letter-spacing: 4px */
+  }
+  
+  .new-box a:hover {
+    background: #C31313;
+    color: #fff;
+    border-radius: 5px;
+  }
