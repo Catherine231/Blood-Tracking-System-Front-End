@@ -1,76 +1,140 @@
-.new-box {
-    position: absolute;
-    top: 70%;
-    bottom: 200%;
-    left: 50%;
-    width: 400px;
-    height: 700px;
-    padding: 40px;
-    transform: translate(-50%, -50%);
-    background: white;
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .new-box h2 {
-    margin: 0 0 30px;
-    padding: 0;
-    color: #C31313;
-    text-align: center;
-  }
-  
-  .new-box .new-user-box {
-    position: relative;
-  }
-  
-  .new-box .new-user-box input {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #C31313;
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid #C31313;
-    outline: none;
-    background: transparent;
-  }
-  .new-box .new-user-box label {
-    position: absolute;
-    top:0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #C31313;
-    pointer-events: none;
-    transition: .5s;
-  }
-  
-  .new-box .new-user-box input:focus ~ label,
-  .new-box .new-user-box input:valid ~ label {
-    top: -20px;
-    left: 0;
-    color: #C31313;
-    font-size: 12px;
-  }
-  
-  .new-box form a {
+  @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background: #D8AA96;
+  color: rgba(0, 0, 0, 0.8);
+  display: grid;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  height: 100vh;
+  justify-items: center;
+  max-height: 100vw;
+}
+
+.signup-container {
+  display: grid;
+  grid-template-areas: "left right";
+  max-width: 900px;
+}
+
+.right-container {
+  background: #C31313;
+  display: grid;
+  grid-template-areas: "." ".";
+  width: 500px;
+  border-radius: 10px;
+}
+.right-container h1:nth-of-type(1) {
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+.right-container .set {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.right-container input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  height: 38px;
+  line-height: 38px;
+  padding-left: 5px;
+}
+.right-container input, .right-container label {
+  color: rgba(0, 0, 0, 0.8);
+}
+.right-container header {
+  padding: 40px;
+}
+
+.right-container .longInput .radio-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.right-container footer {
+  align-items: center;
+  background: #FBFCFC  ;
+  display: grid;
+  padding: 5px 40px;
+}
+.right-container footer a {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    color: #C31313;
+    color: #FFFAFA;
     font-size: 16px;
     text-decoration: none;
-    /* text-transform: uppercase; */
     overflow: hidden;
     transition: .5s;
-    margin-top: 40px;
-    /* letter-spacing: 4px */
-  }
-  
-  .new-box a:hover {
-    background: #C31313;
-    color: #fff;
+    margin-top: 5px;
     border-radius: 5px;
-  }
+}
+.right-container footer #new {
+  background: #C31313;
+  transition: 0.2s all ease-in-out;
+}
+.right-container footer #new:hover {
+  background: #807182;
+  color: white;
+}
+.right-container footer #existing {
+  background: #C31313;
+  border: 1px solid transparent;
+  color: #fff;
+}
+.right-container footer #existing:hover {
+  background: #807182;
+}
+
+.Date label, .Expire label, .Test label, .Temperature label, .longInput label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.radio-container {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: inline-block;
+  padding: 5px;
+}
+
+.radio-container label {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: 0.2s all ease-in-out;
+  width: 50px;
+}
+
+.radio-container input[type=radio] {
+  display: none;
+}
+
+.radio-container input[type=radio]:checked + label {
+  background: #C31313;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.radio-container #Millimeters{
+    border: black;
+}
+.radio-container #Email{
+    border: black;
+}

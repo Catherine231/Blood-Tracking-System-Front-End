@@ -7,10 +7,33 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <style>
-    body{background-color:#F25050;}
+    body{background-color:#EAEDED;}
     footer{background-color: white;}
   </style>
+  <script>
+    $(document).ready(function(){
+      $("#new").click(function(){
+        $("#new").css("color", "white");
+        $("#new").css("background-color", "#C31313");
+        $("#new").css("border-radius", "5px");
+        $("#new").html("Submitted with <br> patient ID:U5826956 <br> Bag ID:5656665")
+        $("#new").css("text-transform","capitalize")
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $("#existing").click(function(){
+        $("#existing").css("color", "white");
+        $("#existing").css("background-color", "#C31313");
+        $("#existing").css("border-radius", "5px");
+        $("#existing").html("Submitted with <br> Bag ID:5656665")
+        $("#existing").css("text-transform","capitalize")
+      });
+    });
+  </script>
 </head>
 <body>
 
@@ -40,42 +63,74 @@
   </nav>
 
   <!-- Blood info Form -->
-  <div class="new-box">
-    <h2>Blood Bag Info</h2>
-    <form>
-      <div class="new-user-box">
-        <input type="text" name="" required="">
-        <label>Enter Patient E-Mail</label>
-      </div>
-      <div class="new-user-box">
-        <input type="text" name="" required="">
-        <label>Enter Blood Bag ID</label>
-      </div>
-      <div class="new-user-box">
-        <input type="number" name="" required="">
-        <label>Enter number of Blood Bags</label>
-      </div>
-      <div class="new-user-box">
-        <input type="number" name="" required="">
-        <label>Enter number of Blood Bags</label>
-      </div>
-      <div class="new-user-box">
-        <input type="number" name="" required="">
-        <label>Enter number of Blood Bags</label>
-      </div>
-      <div class="new-user-box">
-        <input type="number" name="" required="">
-        <label>Enter number of Blood Bags</label>
-      </div>
-      <a id="button1" href="#" >
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Submit
-      </a>
-    </form>
+  <div class='signup-container'>
+    <div class='right-container'>
+      <header>
+        <h1>Blood Info, Be careful!</h1>
+        <div class='set'>
+          <div class='Date'>
+            <label for='Date'>Date</label>
+            <input id='Date' placeholder="MM/DD/YYYY" type='date'>
+          </div>
+          <div class='Expire'>
+            <label for='Expire'>Expire</label>
+            <input id='Expire' placeholder='MM/DD/YYYY' type='date'>
+          </div>
+        </div>
+        <div class='set'>
+            <div class='Test'>
+              <label for='Test'>Test</label>
+              <input id='Test' placeholder="Secure/Not Secure" type='text'>
+            </div>
+            <div class='Temperature'>
+              <label for='Temperature'>Temperature</label>
+              <input id='Temperature' placeholder='20C' type='text'>
+            </div>
+          </div>
+        <div class='longInput'>
+            <label for='Millimeters'>Millimeters</label>
+            <div class='radio-container'>
+                <input id='Millimeters' placeholder='20C' type='text'>
+            </div>   
+        </div>
+        <div class='longInput'>
+            <label for='A+'>Blood Type</label>
+            <div class='radio-container'>
+              <input id='A+' name='pet-weight' type='radio' value='A+'>
+              <label for='A+'>A+</label>
+              <input id='B+' name='pet-weight' type='radio' value='B+'>
+              <label for='B+'>B+</label>
+              <input id='O+' name='pet-weight' type='radio' value='O+'>
+              <label for='O+'>O+</label>
+              <input id='AB+' name='pet-weight' type='radio' value='AB+'>
+              <label for='AB+'>AB+</label>
+              <input id='A-' name='pet-weight' type='radio' value='A-'>
+              <label for='A-'>A-</label>
+              <input id='B-' name='pet-weight' type='radio' value='B-'>
+              <label for='B-'>B-</label>
+              <input id='O-' name='pet-weight' type='radio' value='O-'>
+              <label for='O-'>O-</label>
+              <input id='AB-' name='pet-weight' type='radio' value='AB-'>
+              <label for='AB-'>AB-</label>
+              </div>
+          </div>
+        <div class='longInput'>
+            <label for='Email'>Email</label>
+            <div class='radio-container'>
+                <input id='Email' placeholder="Write patient's Email" type='text'>
+            </div>   
+        </div>
+        
+      </header>
+      <footer>
+        <div class='set'>
+            <a id="new" href="#" >New Donor</a>
+            <a id="existing" href="#" >Existing Donor</a>
+        </div>
+      </footer>
+    </div>
   </div>
+  
 
   <!-- Footer -->
   <footer class="site-footer">
