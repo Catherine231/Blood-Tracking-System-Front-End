@@ -15,12 +15,16 @@
   <script>
       $(document).ready(function(){
         $("#button").click(function(){
+          
           $("#button").css("color", "#C31313");
           $("#button").css("background-color", "#FFFAFA");
           $("#button").css("font-weight", "bold");
           $("#button").css("border-radius", "5px");
+          
           $("#button").html("Confirmed")
+          $("#button").attr("class","fas fa-check")
           $("#button").css("text-transform","capitalize")
+          
         });
       });
     </script>
@@ -46,6 +50,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#" style="position: relative; left: -20px;">Help</a>
           </li>
+          <li>Giza Hospital</li>
           <li><i class="fa fa-hospital-o fa-2x" aria-hidden="true" style="position: relative; top: 5px; left: 1px;" ></i></li>
         </ul>
       </div>
