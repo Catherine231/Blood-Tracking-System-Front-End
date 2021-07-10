@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>Blood Tracking System</title>
-  <link rel="stylesheet" type="text/css" href="RetrieveBloodBags.css">
+  <link rel="stylesheet" type="text/css" href="../Hospital/TrackingBlood.css">
   <link rel="stylesheet" type="text/css" href="../Home-Page/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
@@ -37,32 +37,56 @@
           <li class="nav-item">
             <a class="nav-link" href="#" style="position: relative; left: -20px;">Help</a>
           </li>
-          <li>Giza Hospital</li>
-          <li><i class="fa fa-hospital-o fa-2x" aria-hidden="true" style="position: relative; top: 5px; left: 1px;" ></i></li>
+          <li><i class="fas fa-user fa-2x" aria-hidden="true" style="position: relative; top: 5px; left: 1px;" ></i></li>
         </ul>
       </div>
     </div>
   </nav>
 
 
-  <!--Retriving bags-->
-  <div class="row">
-    <div class="col-md-3 col-sm-6">
-        <div class="product-grid ">
-            <div class="product-image">
-                <a href="#" class="image">
-                    <img class="pic-1" src="bag.png">
-                    <img class="pic-2" src="bag2.png">
-                </a>
+  <!--Timeline to track-->
+  <div class="container px-1 px-md-4 py-5 mx-auto">
+    <div class="card">
+        <div class="row d-flex justify-content-between px-3 top">
+            <div class="container">
+                <h5>Bag ID: <span class="text-danger font-weight-bold">5168496</span></h5>
             </div>
-            <div class="product-content">
-                <div class="price">Bag ID: 6468954</div>
-                <h3 class="title"><a href="#">Track</a></h3>
+        </div> 
+        <!-- Add class 'active' to progress -->
+        <div class="row d-flex justify-content-center">
+            <div class="col-12">
+                <ul id="progressbar" class="text-center">
+                    <li class="active step0"></li>
+                    <li class="active step0"></li>
+                    <li class="active step0"></li>
+                    <li class="step0"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row justify-content-between top">
+            <div class="row d-flex icon-content"> <img class="icon" src="ready.png">
+                <div class="d-flex flex-column">
+                    <p class="font-weight-bold">Bag is<br>Ready</p>
+                </div>
+            </div>
+            <div class="row d-flex icon-content"> <img class="icon" src="Shipped.png">
+                <div class="d-flex flex-column">
+                    <p class="font-weight-bold">Bag is<br>En Route</p>
+                </div>
+            </div>
+            <div class="row d-flex icon-content"> <img class="icon" src="delivered.png">
+                <div class="d-flex flex-column">
+                    <p class="font-weight-bold">Bag<br>Delivered</p>
+                </div>
+            </div>
+            <div class="row d-flex icon-content"> <img class="icon" src="used.png">
+                <div class="d-flex flex-column">
+                    <p class="font-weight-bold">Bag<br>Used</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
-  
 
   <!-- Footer -->
   <footer class="site-footer">
