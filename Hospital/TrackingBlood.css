@@ -1,10 +1,3 @@
-body {
-    color: #000;
-    overflow-x: hidden;
-    height: 100%;
-    background-color: #8C9EFF;
-    background-repeat: no-repeat
-}
 
 .card {
     z-index: 0;
@@ -20,6 +13,13 @@ body {
     padding-top: 40px;
     padding-left: 15% !important;
     padding-right: 15% !important
+}
+
+.info {
+    position: relative;
+    left: 1050px;
+    top: -25px;
+ 
 }
 
 #progressbar {
