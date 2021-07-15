@@ -2,34 +2,22 @@
 <html lang="en">
 <head>
   <title>Blood Tracking System</title>
-  <link rel="stylesheet" type="text/css" href="Hospital-Bag-Recieved.css">
+  <link rel="stylesheet" type="text/css" href="../Hospital/RetrieveBloodBags.css">
+  <link rel="stylesheet" type="text/css" href="../Hospital/RetrieveBloodBags.js">
   <link rel="stylesheet" type="text/css" href="../Home-Page/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <style>
     body{background-color:#EAEDED;}
     footer{background-color: white;}
+    h5{text-align: center;}
   </style>
-  <script>
-      $(document).ready(function(){
-        $("#button").click(function(){
-          $("#button").css("color", "#C31313");
-          $("#button").css("background-color", "#FFFAFA");
-          $("#button").css("font-weight", "bold");
-          $("#button").css("border-radius", "5px");
-          $("#button").html("Confirmed")
-          $("#button").attr("class","fas fa-check")
-          $("#button").css("text-transform","capitalize")
-        });
-      });
-    </script>
 </head>
 <body>
 
    <!-- Header -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#" style="position: relative; top: -10px; color: black; font-family:Helvetica;">Blood</a>
       <a class="navbar-brand" href="#" style="position: relative; top: 10px; right: 50px; color: #C31313; font-family:Helvetica;">Tracking</a>
@@ -50,30 +38,80 @@
           <li class="nav-item">
             <a class="nav-link" href="#" style="position: relative; left: -20px;">Help</a>
           </li>
-          <li style="margin-left: 8px; margin-top: 8px; ">Giza Hospital</li>
+
           <li><i class="fa fa-hospital-o fa-2x" aria-hidden="true" style="position: relative; top: 5px; left: 1px;" ></i></li>
+          <li style="margin-left: 8px; margin-top: 8px; ">Giza Hospital</li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!--Form to submit about the recieved bag-->
-  <div class="login-box">
-    <h2>Info Needed</h2>
-    <form>
-      <div class="user-box">
-        <input type="text" name="" required="">
-        <label>Enter Blood Bag ID</label>
-      </div>
-      <a id="button" href="#" >
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Confirm
-      </a>
-    </form>
-  </div>
+
+  <!--Retriving bags-->
+<main class="py-4">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                   Hospitals
+                </div>
+                <div class="card-body">
+                    <div class="placeholders" >
+                        <input type="text" id="filter0" placeholder="Filter By Bag ID">
+                        <input type="text" id="filter1" placeholder="Filter By Blood Type">
+                        <input type="text" id="filter2" placeholder="Filter By Donor ID">
+                        <input type="text" id="filter3" placeholder="Filter By Safety">
+                        <input type="text" id="filter4" placeholder="Filter By Expirey">
+                    </div>
+                    <table id="filter" class="table">
+                        <thead>
+                            <tr>
+                                <th>Bag ID</th>
+                                <th>Blood Type</th>
+                                <th>Donor ID</th>
+                                <th>Safe</th>
+                                <th>Expired</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>82376893</td>
+                                <td>A</td>
+                                <td>D876</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                            </tr>            
+                            <tr>
+                                <td>45698127</td>
+                                <td>O</td>
+                                <td>D765</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>39481625</td>
+                                <td>O</td>
+                                <td>D426</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>560978215</td>
+                                <td>AB</td>
+                                <td>D539</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>    
+            </div>
+        </div>
+    </div>    
+</main>
+<script src="../Hospital/RetrieveBloodBags.min.js" defer></script>
 
   <!-- Footer -->
   <footer class="site-footer">
