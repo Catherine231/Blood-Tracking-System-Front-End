@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Blood Tracking System</title>
+  <link rel="stylesheet" type="text/css" href="RetrieveAll.css">
+  <link rel="stylesheet" type="text/css" href="../Hospital/RetrieveBloodBags.js">
+  <link rel="stylesheet" type="text/css" href="../Home-Page/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    body{background-color:#EAEDED;}
+    footer{background-color: white;}
+    h5{text-align: center;}
+  </style>
+</head>
+<body>
+
+   <!-- Header -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#" style="position: relative; top: -10px; color: black; font-family:Helvetica;">Blood</a>
+      <a class="navbar-brand" href="#" style="position: relative; top: 10px; right: 50px; color: #C31313; font-family:Helvetica;">Tracking</a>
+      <a class="navbar-brand" href="#" style="position: relative; top: 10px; right: 60px; color:black; font-family:Helvetica;">System</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" style="position: relative; left: -20px;">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="position: relative; left: -20px;">Help</a>
+          </li>
+          <li><i class="fas fa-university fa-2x" aria-hidden="true" style="position: relative; top: 5px; left: 1px;" ></i></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!--Retriving bags-->
+<main class="py-4">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    All Bags
+                </div>
+                <div class="card-body">
+                    <div class="placeholders" >
+                        <input type="text" id="filter0" placeholder="Filter By Hospital">
+                        <input type="text" id="filter1" placeholder="Filter By Bag ID">
+                        <input type="text" id="filter2" placeholder="Filter By Blood Type">
+                        <input type="text" id="filter3" placeholder="Filter By Donor ID">
+                        <input type="text" id="filter4" placeholder="Filter By Safety">
+                        <input type="text" id="filter5" placeholder="Filter By Expirey">
+                        <input type="text" id="filter6" placeholder="Filter By Bag ID" hidden>
+                    </div>
+                    <table id="filter" class="table">
+                        <thead>
+                            <tr>
+                                <th>Hospital</th>
+                                <th>Bag ID</th>
+                                <th>Blood Type</th>
+                                <th>Donor ID</th>
+                                <th>Safe</th>
+                                <th>Expired</th>
+                                <th>Track</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dr Magdi Ahmed Saeed Hospital</td>
+                                <td>82376893</td>
+                                <td>A</td>
+                                <td>D876</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td><a href="#" style="color: #C31313;">track</a></td>
+                            </tr>            
+                            <tr>
+                                <td>El Salam International Hospital</td>
+                                <td>45698127</td>
+                                <td>O</td>
+                                <td>D765</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td><a href="#" style="color: #C31313;">track</a></td>
+                            </tr>
+                            <tr>
+                                <td>Cairo Medical Centre</td>
+                                <td>39481625</td>
+                                <td>O</td>
+                                <td>D426</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td><a href="#" style="color: #C31313;">track</a></td>
+                            </tr>
+                            <tr>
+                                <td>El Salam International Hospital</td>
+                                <td>560978215</td>
+                                <td>AB</td>
+                                <td>D539</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                                <td><a href="#" style="color: #C31313;">track</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>    
+            </div>
+        </div>
+    </div>    
+</main>
+<script src="../Hospital/RetrieveBloodBags.min.js" defer></script>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2021-Blood Tracking System. All Rights Reserved</p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#" style="background-color:#C31313 ;"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a class="twitter" href="#" style="background-color:#C31313 ;"><i class="fab fa-twitter"></i></a></li>
+            <li><a class="instagram" href="#" style="background-color:#C31313 ;"><i class="fab fa-instagram"></i></a></li>
+            <li><a class="linkedin" href="#" style="background-color:#C31313 ;"><i class="fab fa-linkedin-in"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+
+</body>
+</html>
